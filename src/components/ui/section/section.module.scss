@@ -1,0 +1,10 @@
+@use "styles/_var.module.scss" as *;
+
+.container_root {
+    width: $section-width;
+}
+
+.header_info_container {
+    display: flex;
+    justify-content: space-between;
+}

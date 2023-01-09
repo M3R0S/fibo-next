@@ -1,0 +1,49 @@
+@use "styles/_var.module.scss" as *;
+
+.header_delivery_info {
+    color: $color-yellow;
+}
+
+.yandex_food {
+    margin-left: 2rem;
+
+    &::before {
+        background: url("~public/icons/navbar/deliveryInfo/yandex-delivery.png")
+            no-repeat 50% 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: absolute;
+        transform: translate(-2.5rem, -0.1rem);
+        width: 18px;
+        height: 20px;
+        content: "";
+    }
+}
+
+.yandex_rating {
+    margin-left: 2rem;
+
+    &::before {
+        background: url("~public/icons/navbar/deliveryInfo/red-ellipse.png")
+            no-repeat 50% 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: absolute;
+        transform: translate(-1.1rem, -0.2rem);
+        width: 4px;
+        height: 20px;
+        content: "";
+    }
+
+    &::after {
+        background: url("~public/icons/navbar/deliveryInfo/star.png")
+            no-repeat 50% 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: absolute;
+        transform: translate(0.5rem, -0.2rem);
+        width: 14px;
+        height: 20px;
+        content: "";
+    }
+}

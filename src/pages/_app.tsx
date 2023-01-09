@@ -1,5 +1,15 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { Montserrat } from "@next/font/google";
+
+import "styles/globals.scss";
+import { Layout } from "components";
+
+const montserrat = Montserrat();
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    return (
+        <Layout font={montserrat.className}>
+            <Component {...pageProps} />
+        </Layout>
+    );
 }

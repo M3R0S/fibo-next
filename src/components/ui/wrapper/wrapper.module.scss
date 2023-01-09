@@ -1,0 +1,16 @@
+@use "styles/_var.module.scss" as *;
+
+.header_info {
+    display: flex;
+    align-items: center;
+}
+
+.header_delivery_info {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.yandex_delivery {
+    margin-top: 0.9rem;
+}

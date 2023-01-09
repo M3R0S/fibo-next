@@ -1,0 +1,48 @@
+@use "styles/_var.module.scss" as *;
+
+.yandex_food {
+    &::before {
+        background: url("/assets/icons/navbar/deliveryInfo/yandex-delivery.png");
+        transform: translate(-2.5rem, -0.1rem);
+        width: 18px;
+        height: 20px;
+    }
+}
+
+.rating {
+    &::before {
+        background: url("/assets/icons/navbar/deliveryInfo/red-ellipse.png");
+        transform: translate(-1.1rem, -0.2rem);
+        width: 4px;
+        height: 20px;
+    }
+
+    &::after {
+        background: url("/assets/icons/navbar/deliveryInfo/star.png");
+        position: absolute;
+        transform: translate(0.5rem, -0.2rem);
+        width: 14px;
+        height: 20px;
+        content: "";
+    }
+}
+
+b {
+    &:nth-of-type(1) {
+        margin-left: 1.5rem;
+    }
+
+    &:nth-of-type(2) {
+        margin-left: 1rem;
+    }
+
+    &:nth-of-type(2)::before {
+        background: url("/assets/icons/navbar/deliveryInfo/red-ellipse.png")
+            no-repeat 0 60%;
+        position: absolute;
+        transform: translate(-1.1rem, -0.2rem);
+        width: 4px;
+        height: 20px;
+        content: "";
+    }
+}
