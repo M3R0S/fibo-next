@@ -1,11 +1,29 @@
-import { useNavigate } from "hook/useNavigate/useNavigate";
-import { ButtonAccordance } from "./types";
+import {
+    useButtonCallNumber,
+    useButtonNavigate,
+    useButtonNavLink,
+    useButtonOrderCall,
+} from "./hook";
+import { ButtonAccordance, Rec } from "./types";
 
 export const buttonAccordance: ButtonAccordance = {
     NavigateHome: {
-        variantClassName: "navigate_home",
-        useVariantHook: useNavigate,
+        useVariantHook: useButtonNavigate,
         variantHookParams: { href: "/" },
-        type: "button",
+    },
+    OrderCall: {
+        variantClassName: "order_call",
+        useVariantHook: useButtonOrderCall,
+    },
+    CallNumber: {
+        variantClassName: "call_number",
+        useVariantHook: useButtonCallNumber,
+    },
+    NavLink: {
+        useVariantHook: useButtonNavLink,
     },
 };
+
+// const button: Rec = {
+//     CallNumber: {}
+// }

@@ -1,18 +1,17 @@
-import { ReactNode } from "react";
+import { HTMLAttributeAnchorTarget, HTMLAttributes } from "react";
 import { AccordanceVariantClassName } from "utils/types";
 
 type AVariant = "HeaderDeliveryInfo";
 
-export interface AProps {
+export interface AProps extends HTMLAttributes<HTMLAnchorElement> {
     variant: AVariant;
-    children: ReactNode;
-    className?: string
 }
 
 interface AAccordanceVariant {
     src: string
+    target?: HTMLAttributeAnchorTarget
 }
 
 export interface AAccordance {
-    HeaderDeliveryInfo: AccordanceVariantClassName & AAccordanceVariant
+    HeaderDeliveryInfo: AAccordanceVariant
 }

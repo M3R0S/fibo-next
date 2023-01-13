@@ -1,20 +1,38 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
+
+export type SectionName = "pizza" | "pasta" | "soup" | "salad";
+
+export interface PopupQueryParams {
+    popupId: string | null;
+    popupType?: string | null;
+}
 
 export interface AccordanceVariantClassName {
-    variantClassName: string;
+    variantClassName?: string;
 }
 
-export interface AccordanceVariantHook<Hook, Params> {
+export interface AccordanceVariantHook<Hook> {
     useVariantHook: Hook;
-    variantHookParams: Params;
 }
 
-export type AccordanceVariant<Hook, Params> = AccordanceVariantClassName &
-    AccordanceVariantHook<Hook, Params>;
+export interface AccordanceVariantHookParams<Params> {
+    variantHookParams?: Params;
+}
+
+export type AccordanceVariant<Hook, Params, Custom> =
+    AccordanceVariantClassName &
+        AccordanceVariantHook<Hook> &
+        AccordanceVariantHookParams<Params> &
+        Custom;
+
+export type AllParams<Hook, Params> = AccordanceVariantHook<Hook> &
+    AccordanceVariantHookParams<Params>;
 
 export interface HookReturn {
-    handleClick?: () => void;
-    handleChange?: () => void;
+    activeClassName?: string
+    value?: ReactNode;
+    onClick?: () => void;
 }
 
 export interface ImgAccordance {

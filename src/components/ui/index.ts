@@ -6,4 +6,4 @@ export { Header } from "./header/Header";
 export { Title } from "./title/Title";
 export { Span } from "./span/Span";
 export { A } from "./a/A";
-export { B } from "./b/B"
+export { Navbar } from "./navbar/Navbar";

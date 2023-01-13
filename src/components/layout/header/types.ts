@@ -1,4 +1,3 @@
-
 export interface LayoutHeaderProps {
-    font: string
+    font: string;
 }

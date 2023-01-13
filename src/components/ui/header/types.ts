@@ -1,14 +1,4 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { AccordanceVariantClassName } from "utils/types";
 
-type HeaderVariant = "Layout";
-
-export interface HeaderProps {
-    variant: HeaderVariant;
-    children: ReactNode;
-    className?: string;
-}
-
-export interface HeaderAccordance {
-    Layout: AccordanceVariantClassName
-}
+export interface HeaderProps extends HTMLAttributes<HTMLElement> {}

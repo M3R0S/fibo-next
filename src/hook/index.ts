@@ -11,4 +11,3 @@ export { useNavigate } from "./useNavigate/useNavigate"
 // export { useOpenPopup } from "./useOpenPopup/useOpenPopup";
 // export { useDisabledNavbarLinkActive } from "./useDisabledNavbarLinkActive/useDisabledNavbarLinkActive";
 
-export type { UseNavigate, UseNavigateParams } from "./useNavigate/types"

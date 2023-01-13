@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 
-import { UseNavigate } from "./types";
+import { NavigateParams } from "./types";
 
-export const useNavigate: UseNavigate = ({ href }) => {
+export const useNavigate = () => {
     const { push } = useRouter();
 
-    const navigate = () => {
+    const navigate = ({ href }: NavigateParams) => {
         push(href);
     };
 
-    return { handleClick: navigate };
+    return { navigate };
 };

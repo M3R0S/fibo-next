@@ -1,21 +1,16 @@
 import { FC } from "react";
+import { classNames } from "utils";
 
 import cl from "./section.module.scss";
 import { SectionProps } from "./types";
-import { classNames } from "utils";
-import { sectionAccordance } from "./const";
 
 export const Section: FC<SectionProps> = (props) => {
-    const { children, className = "", variant } = props;
+    const { children, className = "" } = props;
 
-    const { variantClassName } = sectionAccordance[variant];
     return (
         <section
-            className={classNames([
-                cl.container_root,
-                cl[variantClassName],
-                className,
-            ])}
+            {...props}
+            className={classNames(cl.container_root, className)}
         >
             {children}
         </section>

@@ -1,7 +1,7 @@
-import logo from "public/icons/ui/header-logo.png";
+import { uiIcons } from "public/icons";
 import { ImgAccordance } from "utils/types";
 
 export const logoAccordance: ImgAccordance = {
-    src: logo,
+    src: uiIcons.headerLogoIcon,
     alt: "Логотип",
 };

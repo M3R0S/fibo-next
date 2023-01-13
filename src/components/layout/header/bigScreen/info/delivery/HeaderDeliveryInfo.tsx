@@ -1,22 +1,33 @@
-import { A, B, Span, Title, Wrapper } from "components/ui";
 import { FC } from "react";
 
 import cl from "./headerDeliveryInfo.module.scss";
+import { A, Span, Title, Wrapper } from "components/ui";
+import { classNames } from "utils";
 
 export const HeaderDeliveryInfo: FC = () => {
     return (
-        <Wrapper variant="HeaderDeliveryInfo">
-            <Title tag="h1" variant="HeaderDeliveryInfo">
+        <Wrapper className={cl.wrapper}>
+            <Title tag="h1" className={cl.header_title}>
                 {"Доставка еды в "}
-                <Span variant="HeaderDeliveryInfo">Ялте</Span>
+                <Span className={cl.header_title_city}>Ялте</Span>
             </Title>
-            <Wrapper variant="HeaderDeliveryInfo">
-                <A variant="HeaderDeliveryInfo">
-                    <Span variant="YandexDeliveryInfoFood">Яндекс еда</Span>
-                    <Span variant="YandexDeliveryInfoRating">4.8</Span>
+            <Wrapper className={cl.wrapper_yandex_info}>
+                <A className={cl.link} variant="HeaderDeliveryInfo">
+                    <Span className={cl.yandex_food}>Яндекс еда</Span>
+                    <Span className={cl.yandex_rating}>4.8</Span>
                 </A>
-                <B variant="HeaderDeliveryInfoLeft">Время доставки</B>
-                <B variant="HeaderDeliveryInfoRight">от 31 мин</B>
+                <Title
+                    tag="h2"
+                    className={classNames(cl.delivery_title, cl.left)}
+                >
+                    Время доставки
+                </Title>
+                <Title
+                    tag="h2"
+                    className={classNames(cl.delivery_title, cl.right)}
+                >
+                    от 31 мин
+                </Title>
             </Wrapper>
         </Wrapper>
     );

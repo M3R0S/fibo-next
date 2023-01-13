@@ -1,16 +1,4 @@
-import { ReactNode } from "react";
-import { AccordanceVariantClassName } from "utils/types";
+import { HTMLAttributes } from "react";
 
-type SpanVariant = "HeaderDeliveryInfo" | "YandexDeliveryInfoFood" | "YandexDeliveryInfoRating";
 
-export interface SpanProps {
-    variant: SpanVariant;
-    children: ReactNode;
-    className?: string;
-}
-
-export interface SpanAccordance {
-    HeaderDeliveryInfo: AccordanceVariantClassName;
-    YandexDeliveryInfoFood: AccordanceVariantClassName
-    YandexDeliveryInfoRating: AccordanceVariantClassName
-}
+export interface SpanProps extends HTMLAttributes<HTMLSpanElement> {}

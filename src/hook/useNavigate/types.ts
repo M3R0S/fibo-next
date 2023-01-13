@@ -1,7 +1,4 @@
-import { HookReturn } from "utils/types";
 
-export interface UseNavigateParams {
+export interface NavigateParams {
     href: string;
 }
-
-export type UseNavigate = (params: UseNavigateParams) => HookReturn;

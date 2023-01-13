@@ -8,13 +8,15 @@ import { HeaderBigScreenProps } from "./types";
 import { useProcessingHeaderInfo } from "./hook";
 import { HeaderInfo } from "./info/HeaderInfo";
 import { Header } from "components/ui";
+import { classNames } from "utils";
+import { HeaderMenu } from "./menu/HeaderMenu";
 
 export const HeaderBigScreen: FC<HeaderBigScreenProps> = ({ font }) => {
     const {
         isScrollDown,
         isEnabledHeaderInfo,
-        onDisabledNavbarInfo,
-        onEnabledNavbarInfo,
+        onDisabledHeaderInfo,
+        onEnabledHeaderInfo,
     } = useProcessingHeaderInfo();
 
     const transitionClassNames: CSSTransitionClassNames = {
@@ -26,13 +28,13 @@ export const HeaderBigScreen: FC<HeaderBigScreenProps> = ({ font }) => {
         <CSSTransition
             in={isScrollDown}
             timeout={TIMEOUT_ANIMATION_SCROLL_HEADER}
-            onExiting={onEnabledNavbarInfo}
-            onEntered={onDisabledNavbarInfo}
+            onExiting={onEnabledHeaderInfo}
+            onEntered={onDisabledHeaderInfo}
             classNames={transitionClassNames}
         >
-            <Header variant="Layout" className={font}>
+            <Header className={classNames(cl.header, font)}>
                 {isEnabledHeaderInfo && <HeaderInfo />}
-                {/* <NavbarMenuApp /> */}
+                <HeaderMenu />
             </Header>
         </CSSTransition>
     );

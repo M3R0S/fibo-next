@@ -1,5 +1,15 @@
 @use "styles/_var.module.scss" as *;
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .call_number {
     transform: translate(1rem);
 }

@@ -7,18 +7,18 @@ export const useProcessingHeaderInfo = () => {
 
     const [isEnabledHeaderInfo, setIsEnabledHeaderInfo] = useState<boolean>(true);
 
-    function onDisabledNavbarInfo() {
+    function onDisabledHeaderInfo() {
         setIsEnabledHeaderInfo(false);
     }
 
-    function onEnabledNavbarInfo() {
+    function onEnabledHeaderInfo() {
         setIsEnabledHeaderInfo(true);
     }
 
     return {
         isScrollDown,
         isEnabledHeaderInfo,
-        onDisabledNavbarInfo,
-        onEnabledNavbarInfo,
+        onDisabledHeaderInfo,
+        onEnabledHeaderInfo,
     };
 };
